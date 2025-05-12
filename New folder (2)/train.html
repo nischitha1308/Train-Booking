@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Details</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        body{
+            background-color: blanchedalmond;
+        }
+        h2{
+            background-color: burlywood;
+            padding: 20px 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+            word-spacing: 20px;
+        }
+        span{
+            color: brown;
+        }
+        nav{
+            background-color: black;
+            padding: 20px 0px;
+        }
+        nav ul{
+            list-style-type: none;
+        }
+        ul>li{
+            display: inline;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            margin: 30px;
+            font-size: large;
+        }
+        a:hover{
+            color: burlywood;
+        }
+        table{
+            margin-top: 100px;
+            width: 50%;
+            height: 50%;
+            border-collapse: collapse;
+        }
+        thead,tbody{
+            width: 50%;
+            height: 50%;
+            border: 2px solid black;
+        }
+        td,th{
+            width: 50%;
+            text-align: center;
+            height: 50%;
+            padding: 20px;
+            border: 2px solid black;
+        }
+        button{
+            padding: 10px;
+            font-weight: bold;
+            background-color: beige;
+        }
+        button:hover{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>National <span>Booking</span> System</h2>
+           <nav>
+            <ul>
+                <li><a href="site.html">Home</a></li>
+                <li><a href="#">Train Details</a></li>
+                <li><a href="display.html">Display</a></li>
+            </ul>
+           </nav>
+        <table id="Booking Details">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th id="Trainname">Train Name</th>
+                    <th id="Arrivaltime">Arrival Time</th>
+                    <th id="Depaturetime">Depature Time</th>
+                    <th>Cost</th>
+                    <th>Book</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/05/2025</td>
+                    <td>Chennai Express</td>
+                    <td>10:30</td>
+                    <td>11:00</td>
+                    <td>500</td>
+                    <td><button type="submit" onclick="book()">Book</button></td>
+                </tr>
+                <tr>
+                    <td>12/05/2025</td>
+                    <td>Mumbai Express</td>
+                    <td>12:30</td>
+                    <td>13:30</td>
+                    <td>1000</td>
+                    <td><button type="submit" onclick="book()">Book</button></td>
+                </tr>
+                <tr>
+                    <td>15/05/2025</td>
+                    <td>kadapa Express</td>
+                    <td>14:30</td>
+                    <td>15:00</td>
+                    <td>700</td>
+                    <td><button type="submit" onclick="book()">Book</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="successMessage" style="display: none; color: green; font-weight: bold; margin-top: 20px;"></div>
+        <script>
+            function book() {
+                const messageDiv = document.getElementById("successMessage");
+                messageDiv.style.display = "block";
+                messageDiv.textContent = "Train booked successfully!";
+                setTimeout(() => {
+             messageDiv.style.display = "none";
+             }, 2000);
+            }
+        </script>
+    </center>
+</body>
+</html>

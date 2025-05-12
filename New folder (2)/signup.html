@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: blanchedalmond;
+        }
+        header{
+            background-color: burlywood;
+            padding: 20px 0px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+            word-spacing: 20px;
+        }
+        span{
+            color: brown;
+        }
+        h2{
+            background-color: black;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            font-size: 2rem;
+            padding: 10px 0px;
+        }
+        form{
+            margin-top: 80px;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 40%;
+            height: 400px;
+        }
+        input{
+            margin-top: 30px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 70%;
+            background-color: beige;
+            border: 1px solid black;
+        }
+        button{
+            padding: 10px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: white;
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 10px;
+            width: 90%;
+        }
+        button:hover{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>National <span>Booking</span> System</header>
+        <h2>Register Now</h2>
+        <form action="" method="" id="myform">
+            <input type="text" name="Name" id="Name" placeholder="Enter Name">
+            <input type="email" name="Email" id="Email" placeholder="Enter Email">
+            <input type="password" name="Password" id="Password" placeholder="Enter Password">
+            <button type="submit" onclick="submit()">Submit</button>
+        </form>
+        <div id="successMessage" style="display: none; color: green; font-weight: bold; margin-top: 20px;"></div>
+        <script>
+            function submit(){
+                const messageDiv = document.getElementById("successMessage");
+                messageDiv.style.display = "block";
+                messageDiv.textContent = "Registered successfully!";
+                setTimeout(() => {
+             messageDiv.style.display = "none";
+             }, 2000);
+            }
+        </script>
+    </center>
+</body>
+</html>
