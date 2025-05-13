@@ -22,15 +22,34 @@
         span{
             color: brown;
         }
-        h2{
+        nav{
             background-color: black;
-            font-family: 'Times New Roman', Times, serif;
+            padding: 20px 0px;
+        }
+        nav ul{
+            list-style-type: none;
+        }
+        nav ul>li{
+            display: inline;
+        }
+        nav a{
             color: white;
+            text-decoration: none;
+            margin: 30px;
+            font-size: large;
+        }
+        nav a:hover{
+            color: burlywood;
+        }
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            color: Black;
+            margin-top: 20px;
             font-size: 2rem;
             padding: 10px 0px;
         }
         form{
-            margin-top: 80px;
+            margin-top: 40px;
             border: 2px solid black;
             border-radius: 10px;
             width: 40%;
@@ -62,6 +81,15 @@
 <body>
     <center>
         <header>National <span>Booking</span> System</header>
+        <nav>
+            <ul>
+                <li><a href="site.html">Home</a></li>
+                <li><a href="train.html">Train Details</a></li>
+                <li><a href="display.html">Display</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="signin.html">Signin</a></li>
+            </ul>
+        </nav>
         <h2>Register Now</h2>
         <form action="" method="" id="myform">
             <input type="text" name="Name" id="Name" placeholder="Enter Name">
